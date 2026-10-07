@@ -1,0 +1,90 @@
+# ───────────── Dependencies ─────────────
+/vendor
+/node_modules
+
+# ───────────── Environment & secrets ─────────────
+# NOTE: .env.example is intentionally NOT ignored (README setup needs it)
+.env
+.env.backup
+.env.production
+.env.*
+!.env.example
+auth.json
+*.pem
+*.key
+
+# ───────────── Laravel runtime ─────────────
+/storage/*.key
+/storage/pail
+/storage/logs/*.log
+/storage/framework/views/*.php
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/bootstrap/cache/*.php
+
+# User uploads (business logos, expense receipts)
+/storage/app/public/*
+!/storage/app/public/.gitignore
+/storage/app/receipts
+/storage/app/private
+
+# ───────────── Build output ─────────────
+/public/build
+/public/hot
+/public/storage
+/public/mix-manifest.json
+
+# ───────────── Local databases ─────────────
+/database/*.sqlite
+/database/*.sqlite-journal
+/database/*.sqlite-shm
+/database/*.sqlite-wal
+*.sql
+*.sql.gz
+
+# ───────────── Testing & tooling caches ─────────────
+/.phpunit.cache
+.phpunit.cache/
+.phpunit.result.cache
+/coverage
+/.phpunit-watcher.json
+.php-cs-fixer.cache
+.php_cs.cache
+.phpstan.cache
+.phpactor.json
+
+# ───────────── Package manager debug logs ─────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ───────────── Local dev environments ─────────────
+/.vagrant
+Homestead.json
+Homestead.yaml
+/.fleet
+/.nova
+/.zed
+
+# ───────────── Editors / IDEs ─────────────
+/.idea
+/.vscode
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ───────────── OS files ─────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ───────────── Archives & misc ─────────────
+*.zip
+*.rar
+*.7z
+*.bak
+*.tmp
